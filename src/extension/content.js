@@ -1,41 +1,70 @@
-chrome.runtime.sendMessage("check_permission", (permitted) => {
-  if (!permitted) {
-    console.log("No permission - the extension will not run.");
-    return;
-  }
+// content.js
 
-  console.log("Permission granted — the extension is monitoring the Google search field.");
-  function watchSearchInput() {
-    const input = document.querySelector('input[name="q"]');
-    if (!input) return false;
+// Debounce function
+function debounce(func, delay) {
+  let timer;
+  return function (...args) {
+    clearTimeout(timer);
+    timer = setTimeout(() => func.apply(this, args), delay);
+  };
+}
 
-    console.log("Search input found.");
-    console.log("Current input value:", input.value);
+// Function to attach event listener to Google search input
+function attachListener(input) {
+  console.log("Google search input detected:", input);
 
-    // Track changes as the user types
-    input.addEventListener("input", () => {
-      console.log("User typed:", input.value);
-    });
+  // Debounced function to send to server
+  const sendToServer = debounce((value) => {
+    if (!value) return;
 
-    // Optional: MutationObserver for autocomplete or dynamic changes
-    const observer = new MutationObserver(() => {
-      console.log("Vrednost inputa se promenila (MutationObserver):", input.value);
-    });
+    fetch("http://localhost:5000/save_search", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ query: value, timestamp: Date.now() })
+    })
+    .then(() => console.log("Search sent to server:", value))
+    .catch(err => console.error("Error sending to server:", err));
+  }, 500);
 
-    observer.observe(input, { attributes: true, attributeFilter: ['value'] });
+  // Listen for user typing
+  input.addEventListener("input", () => {
+    const value = input.value.trim();
+    console.log("User typed:", value);
+    sendToServer(value);
+  });
+}
 
+// Function to find the input and attach listener
+function watchSearchInput() {
+  const input = document.querySelector('input[name="q"]');
+  if (input) {
+    attachListener(input);
     return true;
   }
+  return false;
+}
 
-  // Trying to find the input immediately
-  if (!watchSearchInput()) {
-    // If the input is not yet loaded, observe the DOM for changes
-    const bodyObserver = new MutationObserver(() => {
-      if (watchSearchInput()) {
-        // Once found, stop observing the body
-        bodyObserver.disconnect();
-      }
-    });
-    bodyObserver.observe(document.body, { childList: true, subtree: true });
+// Initialize
+if (!watchSearchInput()) {
+  // Observe DOM in case input is added later (Google is dynamic)
+  const observer = new MutationObserver(() => {
+    if (watchSearchInput()) {
+      observer.disconnect();
+    }
+  });
+
+  observer.observe(document.documentElement, {
+    childList: true,
+    subtree: true
+  });
+}
+
+// Optional: detect SPA-style navigation (URL changes without full reload)
+let lastUrl = location.href;
+setInterval(() => {
+  if (location.href !== lastUrl) {
+    lastUrl = location.href;
+    console.log("URL changed, reinitializing input watcher");
+    watchSearchInput();
   }
-});
+}, 1000);

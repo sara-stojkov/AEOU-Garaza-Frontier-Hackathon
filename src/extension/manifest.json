@@ -1,32 +1,24 @@
 {
   "name": "Google Search Monitor",
-  "description": "Keeps track of the Google search field (with user permission).",
   "version": "1.0",
   "manifest_version": 3,
-
-  "permissions": ["storage", "permissions"],
-
-  "optional_host_permissions": [
-    "https://www.google.com/*"
+  "description": "Monitors Google search results and sends data to a local server if permission is granted.",
+  "permissions": ["storage", "tabs"],
+  "host_permissions": [
+    "https://www.google.com/*",
+    "http://localhost:5000/*"
   ],
-
   "background": {
     "service_worker": "background.js"
   },
-
-  "action": {
-    "default_popup": "popup.html"
-  },
-
   "content_scripts": [
-    {
-      "matches": ["https://www.google.com/*"],
-      "js": ["content.js"],
-      "run_at": "document_start"
-    }
-  ],
-
-  "icons": {
-    "128": "default_icon.png"
+  {
+    "matches": ["*://www.google.com/*"],
+    "js": ["content.js"],
+    "run_at": "document_idle",
+    "all_frames": false
   }
+],
+  "action": { "default_popup": "popup.html" },
+  "icons": { "128": "default_icon.png" }
 }
