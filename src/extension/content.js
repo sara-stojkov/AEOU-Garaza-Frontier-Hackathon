@@ -11,7 +11,7 @@ function debounce(func, delay) {
 
 // Function to attach event listener to Google search input
 function attachListener(input) {
-  console.log("Google search input detected:", input);
+  console.log("Google search input detected:", input.value);
 
   // Debounced function to send to server
   const sendToServer = debounce((value) => {
