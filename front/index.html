@@ -20,11 +20,12 @@
 
 <div class="w-[1440px] h-[960px] bg-white inline-flex justify-start items-start mx-auto">
   <!-- Left Sidebar (Icon Navigation) -->
-  <aside class="px-4 py-6 bg-slate-50 border-r border-slate-200 inline-flex flex-col justify-start items-start gap-96 overflow-hidden">
+  <aside class="px-4 py-10 bg-slate-50 border-r border-slate-200 inline-flex flex-col justify-start items-start gap-96 overflow-hidden">
     <div class="flex flex-col justify-start items-center gap-8">
       <a href="/" class="size-8 relative bg-indigo-600 rounded-xl shadow-[0px_4px_8px_0px_rgba(79,70,229,0.10)] outline outline-[0.50px] outline-offset-[-0.50px] outline-white/30 inline-flex justify-center items-center gap-[5px] overflow-hidden">
-        <div class="w-3.5 h-4 bg-white shadow-[0px_4px_8px_0px_rgba(0,0,0,0.60)] outline outline-[0.25px] outline-white backdrop-blur-lg"></div>
-      </a>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-arrow-down-up" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5m-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5"/>
+</svg> </a>
       <nav class="flex flex-col justify-start items-start gap-4">
         <button aria-label="Home" class="size-12 p-4 bg-white rounded-[123px] inline-flex justify-center items-center gap-2.5 overflow-hidden hover:bg-slate-100 transition-colors"> 
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
@@ -33,20 +34,19 @@
       </svg>
         </button>
         <button aria-label="Messages" class="size-12 p-4 rounded-[123px] inline-flex justify-center items-center gap-2.5 overflow-hidden hover:bg-slate-100 transition-colors">
-          <div class="w-5 h-4 bg-slate-600"></div>
-        </button>
-        <button aria-label="Search" class="size-12 p-4 rounded-[123px] inline-flex justify-center items-center gap-2.5 overflow-hidden hover:bg-slate-100 transition-colors">
-          <div class="size-5 bg-slate-600"></div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-left-text-fill" viewBox="0 0 16 16">
+  <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1z"/>
+</svg>
         </button>
         <button aria-label="Settings" class="size-12 p-4 rounded-[123px] inline-flex justify-center items-center gap-2.5 overflow-hidden hover:bg-slate-100 transition-colors">
-          <div class="size-5 bg-slate-600"></div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-wide-connected" viewBox="0 0 16 16">
+  <path d="M7.068.727c.243-.97 1.62-.97 1.864 0l.071.286a.96.96 0 0 0 1.622.434l.205-.211c.695-.719 1.888-.03 1.613.931l-.08.284a.96.96 0 0 0 1.187 1.187l.283-.081c.96-.275 1.65.918.931 1.613l-.211.205a.96.96 0 0 0 .434 1.622l.286.071c.97.243.97 1.62 0 1.864l-.286.071a.96.96 0 0 0-.434 1.622l.211.205c.719.695.03 1.888-.931 1.613l-.284-.08a.96.96 0 0 0-1.187 1.187l.081.283c.275.96-.918 1.65-1.613.931l-.205-.211a.96.96 0 0 0-1.622.434l-.071.286c-.243.97-1.62.97-1.864 0l-.071-.286a.96.96 0 0 0-1.622-.434l-.205.211c-.695.719-1.888.03-1.613-.931l.08-.284a.96.96 0 0 0-1.186-1.187l-.284.081c-.96.275-1.65-.918-.931-1.613l.211-.205a.96.96 0 0 0-.434-1.622l-.286-.071c-.97-.243-.97-1.62 0-1.864l.286-.071a.96.96 0 0 0 .434-1.622l-.211-.205c-.719-.695-.03-1.888.931-1.613l.284.08a.96.96 0 0 0 1.187-1.186l-.081-.284c-.275-.96.918-1.65 1.613-.931l.205.211a.96.96 0 0 0 1.622-.434zM12.973 8.5H8.25l-2.834 3.779A4.998 4.998 0 0 0 12.973 8.5m0-1a4.998 4.998 0 0 0-7.557-3.779l2.834 3.78zM5.048 3.967l-.087.065zm-.431.355A4.98 4.98 0 0 0 3.002 8c0 1.455.622 2.765 1.615 3.678L7.375 8zm.344 7.646.087.065z"/>
+</svg>
         </button>
-        <button aria-label="Notifications" class="size-12 p-4 rounded-[123px] inline-flex justify-center items-center gap-2.5 overflow-hidden hover:bg-slate-100 transition-colors">
-          <div class="w-4 h-6 bg-slate-600"></div>
-        </button>
-        <button aria-label="Favorites" class="size-12 p-4 rounded-[123px] inline-flex justify-center items-center gap-2.5 overflow-hidden hover:bg-slate-100 transition-colors">
-          <div class="size-5 bg-slate-600"></div>
-        </button>
+        <button aria-label="Profile" class="size-12 p-4 rounded-[123px] inline-flex justify-center items-center gap-2.5 overflow-hidden hover:bg-slate-100 transition-colors">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+  <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+</svg>        </button>
       </nav>
     </div>
     <div class="flex flex-col justify-start items-start gap-4">
@@ -87,7 +87,9 @@
           <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293z"/>
         </svg>
           <span class="flex-1 text-slate-800 text-lg font-bold leading-6">Home</span>
-          <div class="w-4 h-2.5 bg-slate-400"></div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+          </svg>
         </a>
         <a href="#discover" class="self-stretch px-6 py-4 inline-flex justify-start items-center gap-3 hover:bg-slate-100 transition-colors">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-compass" viewBox="0 0 16 16">
@@ -95,8 +97,9 @@
           <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z"/>
           </svg>
           <span class="flex-1 text-slate-800 text-lg font-bold leading-6">Discover</span>
-          <div class="w-4 h-2.5 bg-slate-400"></div>
-        </a>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+          </svg>        </a>
         <a href="#history" class="self-stretch px-6 py-4 inline-flex justify-start items-center gap-3 hover:bg-slate-100 transition-colors">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-history" viewBox="0 0 16 16">
           <path d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022zm2.004.45a7 7 0 0 0-.985-.299l.219-.976q.576.129 1.126.342zm1.37.71a7 7 0 0 0-.439-.27l.493-.87a8 8 0 0 1 .979.654l-.615.789a7 7 0 0 0-.418-.302zm1.834 1.79a7 7 0 0 0-.653-.796l.724-.69q.406.429.747.91zm.744 1.352a7 7 0 0 0-.214-.468l.893-.45a8 8 0 0 1 .45 1.088l-.95.313a7 7 0 0 0-.179-.483m.53 2.507a7 7 0 0 0-.1-1.025l.985-.17q.1.58.116 1.17zm-.131 1.538q.05-.254.081-.51l.993.123a8 8 0 0 1-.23 1.155l-.964-.267q.069-.247.12-.501m-.952 2.379q.276-.436.486-.908l.914.405q-.24.54-.555 1.038zm-.964 1.205q.183-.183.35-.378l.758.653a8 8 0 0 1-.401.432z"/>
@@ -104,8 +107,9 @@
           <path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5"/>
         </svg>          
         <span class="flex-1 text-slate-800 text-lg font-bold leading-6">Library</span>
-          <div class="w-4 h-2.5 bg-slate-400"></div>
-        </a>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+          </svg>        </a>
         <ul class="self-stretch pl-9 pr-6 py-2 flex flex-col justify-start items-start">
           <li class="self-stretch pl-4 py-2 border-l border-slate-400">
             <a href="#chat1" class="text-slate-600 text-base font-medium leading-5 line-clamp-1 hover:text-slate-800">Hackign FBI server with raspberry pie</a>
