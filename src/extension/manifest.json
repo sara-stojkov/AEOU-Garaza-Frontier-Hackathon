@@ -1,6 +1,6 @@
 {
   "name": "Google Search Monitor",
-  "description": "Prati samo Google search polje (uz dozvolu korisnika).",
+  "description": "Keeps track of the Google search field (with user permission).",
   "version": "1.0",
   "manifest_version": 3,
 
