@@ -4,6 +4,6 @@ document.getElementById("allow").addEventListener("click", async () => {
   });
 
   document.getElementById("status").innerText = granted
-    ? "Dozvola odobrena."
-    : "Dozvola odbijena.";
+    ? "Permission granted."
+    : "Permission denied.";
 });

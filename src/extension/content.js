@@ -1,24 +1,23 @@
 chrome.runtime.sendMessage("check_permission", (permitted) => {
   if (!permitted) {
-    console.log("Nema dozvole — ekstenzija ne radi.");
+    console.log("No permission - the extension will not run.");
     return;
   }
 
-  console.log("Dozvola postoji — ekstenzija prati Google search polje.");
-
+  console.log("Permission granted — the extension is monitoring the Google search field.");
   function watchSearchInput() {
     const input = document.querySelector('input[name="q"]');
     if (!input) return false;
 
-    console.log("Search input pronađen.");
-    console.log("Trenutna vrednost inputa:", input.value);
+    console.log("Search input found.");
+    console.log("Current input value:", input.value);
 
-    // Praćenje promena dok korisnik unosi
+    // Track changes as the user types
     input.addEventListener("input", () => {
-      console.log("Korisnik unosi:", input.value);
+      console.log("User typed:", input.value);
     });
 
-    // Opcionalno: MutationObserver za autocomplete ili dinamičke promene
+    // Optional: MutationObserver for autocomplete or dynamic changes
     const observer = new MutationObserver(() => {
       console.log("Vrednost inputa se promenila (MutationObserver):", input.value);
     });
@@ -28,12 +27,12 @@ chrome.runtime.sendMessage("check_permission", (permitted) => {
     return true;
   }
 
-  // Pokušavamo da nađemo input odmah
+  // Trying to find the input immediately
   if (!watchSearchInput()) {
-    // Ako input još nije učitan, pratimo DOM za promene
+    // If the input is not yet loaded, observe the DOM for changes
     const bodyObserver = new MutationObserver(() => {
       if (watchSearchInput()) {
-        // Kada ga pronađemo, prekidamo posmatranje body-a
+        // Once found, stop observing the body
         bodyObserver.disconnect();
       }
     });
