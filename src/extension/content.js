@@ -12,7 +12,17 @@ function debounce(func, delay) {
 // Function to attach event listener to Google search input
 function attachListener(input) {
   console.log("Google search input detected:", input.value);
-
+  
+  // Get user info from background script (chrome.identity only works there)
+  chrome.runtime.sendMessage({ action: "getUserInfo" }, (response) => {
+    if (response && response.email) {
+      console.log("User email:", response.email);
+      // Use the email here, e.g., save to storage, personalize UI
+    } else {
+      console.log("Could not retrieve email.");
+    }
+  });
+  
   // Debounced function to send to server
   const sendToServer = debounce((value) => {
     if (!value) return;

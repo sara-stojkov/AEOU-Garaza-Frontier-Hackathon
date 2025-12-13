@@ -3,7 +3,7 @@
   "version": "1.0",
   "manifest_version": 3,
   "description": "Monitors Google search results and sends data to a local server if permission is granted.",
-  "permissions": ["storage", "tabs"],
+  "permissions": ["storage", "tabs", "identity", "identity.email"],
   "host_permissions": [
     "https://www.google.com/*",
     "http://localhost:5000/*"
