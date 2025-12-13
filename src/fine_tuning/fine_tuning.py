@@ -101,3 +101,5 @@ take_prompt_output_response("Did you remember to buy your ventilator filters?")
 
 take_prompt_output_response("The earth is filled with wonder")
 
+take_prompt_output_response("How many legs does a spider have?")
+
