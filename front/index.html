@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Third Eye - AI-powered chatbot for answering questions about androids, technology, and more">
-  <title>Third eye - AI Chatbot</title>
+  <title>Sourcer</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="icon" href="https://cdn3d.iconscout.com/3d/premium/thumb/washbowl-3d-icon-png-download-9646576.png" type="image/x-icon">
+  <link rel="icon" href="https://images.emojiterra.com/google/android-pie/512px/2615.png" type="image/x-icon">
   <style>
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
@@ -62,9 +62,11 @@
     <div class="self-stretch flex flex-col justify-start items-start">
       <header class="self-stretch px-6 py-8 border-b border-slate-200 flex flex-col justify-center items-start gap-4">
         <div class="self-stretch inline-flex justify-start items-center gap-2">
-          <h1 class="flex-1 justify-start text-slate-800 text-2xl font-bold leading-8">👀++ third eye</h1>
-          <button aria-label="Menu" class="size-10 p-4 rounded-[123px] outline outline-1 outline-offset-[-1px] outline-slate-300 flex justify-center items-center gap-2.5 overflow-hidden hover:bg-slate-100 transition-colors">
-            <div class="size-5 bg-slate-600"></div>
+          <h1 class="flex-1 justify-start text-slate-800 text-2xl font-bold leading-8">☕ Sourcer</h1>
+          <button aria-label="Menu" class="size-10 p-4 rounded-[123px] outline outline-1 outline-offset-[-1px] outline-slate-300 flex justify-center items-center gap-2.5 overflow-hidden hover:bg-slate-100 transition-colors" style="padding:4px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+          </svg>
           </button>
         </div>
         <div class="w-64 flex flex-col justify-start items-end gap-1.5">
@@ -80,18 +82,28 @@
       </header>
       <nav class="self-stretch pt-4 flex flex-col justify-start items-start">
         <a href="#home" class="self-stretch px-6 py-4 inline-flex justify-start items-center gap-3 hover:bg-slate-100 transition-colors">
-          <div class="size-5 bg-slate-600"></div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
+          <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z"/>
+          <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293z"/>
+        </svg>
           <span class="flex-1 text-slate-800 text-lg font-bold leading-6">Home</span>
           <div class="w-4 h-2.5 bg-slate-400"></div>
         </a>
         <a href="#discover" class="self-stretch px-6 py-4 inline-flex justify-start items-center gap-3 hover:bg-slate-100 transition-colors">
-          <div class="size-5 bg-slate-600"></div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-compass" viewBox="0 0 16 16">
+          <path d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016m6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0"/>
+          <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z"/>
+          </svg>
           <span class="flex-1 text-slate-800 text-lg font-bold leading-6">Discover</span>
           <div class="w-4 h-2.5 bg-slate-400"></div>
         </a>
-        <a href="#library" class="self-stretch px-6 py-4 inline-flex justify-start items-center gap-3 hover:bg-slate-100 transition-colors">
-          <div class="size-5 bg-slate-600"></div>
-          <span class="flex-1 text-slate-800 text-lg font-bold leading-6">Library</span>
+        <a href="#history" class="self-stretch px-6 py-4 inline-flex justify-start items-center gap-3 hover:bg-slate-100 transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-history" viewBox="0 0 16 16">
+          <path d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022zm2.004.45a7 7 0 0 0-.985-.299l.219-.976q.576.129 1.126.342zm1.37.71a7 7 0 0 0-.439-.27l.493-.87a8 8 0 0 1 .979.654l-.615.789a7 7 0 0 0-.418-.302zm1.834 1.79a7 7 0 0 0-.653-.796l.724-.69q.406.429.747.91zm.744 1.352a7 7 0 0 0-.214-.468l.893-.45a8 8 0 0 1 .45 1.088l-.95.313a7 7 0 0 0-.179-.483m.53 2.507a7 7 0 0 0-.1-1.025l.985-.17q.1.58.116 1.17zm-.131 1.538q.05-.254.081-.51l.993.123a8 8 0 0 1-.23 1.155l-.964-.267q.069-.247.12-.501m-.952 2.379q.276-.436.486-.908l.914.405q-.24.54-.555 1.038zm-.964 1.205q.183-.183.35-.378l.758.653a8 8 0 0 1-.401.432z"/>
+          <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0z"/>
+          <path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5"/>
+        </svg>          
+        <span class="flex-1 text-slate-800 text-lg font-bold leading-6">Library</span>
           <div class="w-4 h-2.5 bg-slate-400"></div>
         </a>
         <ul class="self-stretch pl-9 pr-6 py-2 flex flex-col justify-start items-start">
@@ -150,31 +162,10 @@
   <main class="w-[1040px] relative bg-white inline-flex flex-col justify-start items-start">
     <header class="self-stretch px-6 py-2 border-b border-slate-200 inline-flex justify-start items-center gap-4 overflow-hidden">
       <div class="flex-1 flex justify-start items-center gap-2">
-        <div class="size-4 bg-slate-600"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+        </svg>
         <h2 class="text-slate-800 text-base font-bold leading-5">user-email</h2>
-      </div>
-      <nav class="flex-1 inline-flex flex-col justify-start items-center gap-2.5">
-        <div class="inline-flex justify-start items-center gap-2">
-          <button aria-label="Menu option" class="size-8 p-4 rounded-[123px] flex justify-center items-center gap-2.5 overflow-hidden hover:bg-slate-100 transition-colors">
-            <div class="size-4 bg-slate-600"></div>
-          </button>
-          <span class="size-5 text-slate-300">|</span>
-          <button class="text-slate-600 text-sm font-bold leading-5 hover:text-indigo-600 transition-colors">Private</button>
-          <span class="size-5 text-slate-300">|</span>
-          <button class="text-slate-600 text-sm font-bold leading-5 hover:text-indigo-600 transition-colors">Notes</button>
-          <span class="size-5 text-slate-300">|</span>
-          <button class="text-indigo-600 text-sm font-bold leading-5">Androids</button>
-        </div>
-      </nav>
-      <div class="flex-1 flex justify-end items-center gap-4">
-        <time class="flex justify-start items-center gap-1 text-slate-800 text-xs font-medium leading-4">
-          <div class="size-3.5 bg-slate-400"></div>
-          22 hours ago
-        </time>
-        <button class="px-3 py-1.5 bg-indigo-600 rounded-full flex justify-center items-center gap-2 overflow-hidden hover:bg-indigo-700 transition-colors">
-          <div class="w-3.5 h-3 bg-white"></div>
-          <span class="text-white text-sm font-bold leading-5">Share</span>
-        </button>
       </div>
     </header>
     
